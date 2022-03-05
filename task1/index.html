@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Веб-технологии: Протокол HTTP</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="toUpButton"><a href="#top">Наверх</a></div>
+        <header id="top" class="header">
+            <div class="header__container">
+                <div class="hamburger__menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menu__box">
+                        <li class="menu__link"><a href="#">Пункты</a></li>
+                        <li class="menu__link"><a href="#">Меню</a></li>
+                        <li class="menu__link"><a href="#">Для</a></li>
+                        <li class="menu__link"><a href="#">Демонстрации</a></li>
+                        <li class="menu__link"><a href="#">Бургер</a></li>
+                        <li class="menu__link"><a href="#">Меню</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="default__menu">
+                    <ul class="menu">
+                        <li class="menu__link"><a href="#">Пункты</a></li>
+                        <li class="menu__link"><a href="#">Меню</a></li>
+                        <li class="menu__link"><a href="#">Для</a></li>
+                        <li class="menu__link"><a href="#">Демонстрации</a></li>
+                        <li class="menu__link"><a href="#">Бургер</a></li>
+                        <li class="menu__link"><a href="#">Меню</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__title">Веб-технологии: Протокол HTTP</div>
+                <div class="hr"></div>
+                <section class="section">
+                    <h2 class="section__title">Введение</h2>
+                        <div class="section__body">
+                            <p class="body__text">
+                                Как так получается, что компьютеры способны одинаково видеть информацию в сети Интернет? И как вообще гипертекст умудряется передаваться от одного компьютера ко многим другим? Это способствует HTTP. Протокол HTTP.
+                            </p>
+                        </div>
+                </section>
+                <div class="hr"></div>
+                <section class="section">
+                    <h2 class="section__title">Обзор</h2>
+                    <div class="section__body">
+                        <h3 class="body__title">Протокол HTTP</h3>
+                        <p class="body__text">
+                            Протокол HTTP или HyperText Transfer Protocol это главный прокол сервиса Интернет WWW (всемирной паутины). Основная задача протокола, обеспечить передачу гипертекста в сети. В протоколе точно описывается формат сообщений, для обмена клиентов и серверов.
+                        </p>
+                        <p class="body__text definition">
+                            <span class="bold">HTTP (англ. HyperText Transfer Protocol — «протокол передачи гипертекста») —</span> протокол прикладного уровня передачи данных, изначально — в виде гипертекстовых документов в формате HTML, в настоящее время используется для передачи произвольных данных.
+                        </p>
+                        <p class="body__text">
+                            Основа протокола обеспечить взаимодействие клиента и сервера по средством одного ASCII-запроса, и следующего на него ответа в стандарте RFC 822 MIME.
+                        </p>
+                        <p class="body__text">
+                            На практике протокол HTTP работает на основе <a href="https://ru.wikipedia.org/wiki/TCP/IP">TCP/IP</a> порт 80, но можно настроить и по-другому. И хоть <a href="https://ru.wikipedia.org/wiki/TCP/IP">TCP/IP</a> не является обязательным, он остается предпочтительным, так как берет на себя разбиение и сборку сообщений на себя и не «напрягает» ни браузер, ни сервер.
+                        </p>
+                        <p class="body__text">
+                            Следует отметить, что протокол HTTP может использоваться не только в веб-технологиях, но и других ООП приложениях (объективно-ориентированных).
+                        </p>
+
+                        <h3 class="body__title">URL</h3>
+                        <p class="body__text">
+                            Основой веб-общения клиент-сервер является запрос. Запрос отправляется при помощи URL– единого указателя ресурсов Интернет. Напомню, что такое URL адрес.
+                        </p>
+                        <div class="body__photo">
+                            <div class="photo__img">
+                                <img src="./src/img/url.png" alt="Описание URL">
+                            </div>
+                            <div class="photo__sign bold">
+                                Рисунок 1 — Структура URL адреса
+                            </div>
+                        </div>
+
+                        <p class="body__text">
+                            Понятная и простая структура URL состоит из следующих элементов:
+                        </p>
+                        <ol class="body__list">
+                            <li class="list__item">Протокол</li>
+                            <li class="list__item">Хост</li>
+                            <li class="list__item">Порт</li>
+                            <li class="list__item">Каталог ресурса</li>
+                            <li class="list__item">Метки (Запрос)</li>
+                        </ol>
+                        <p class="body__text">
+                            <span class="note">Примечание:</span> Протокол http это протокол для простых, не защищенных соединений. Защищенные соединения работают по протоколу https. Он более безопасен для обмена данными.
+                        </p>
+
+                        <h3 class="body__title">Методы HTTP запросов</h3>
+                        <p class="body__text">
+                            Один из параметров URL, определяет название хоста, с которым мы хотим общаться. Но этого мало. Нужно определить действие, которое нужно совершить. Сделать это можно при помощи метода определенного протоколом HTTP.
+                        </p>
+
+                        <h3 class="body__title">Методы HTTP</h3>
+                        <ul class="body__list">
+                            <li class="list__item">Метод/Описание</li>
+                            <li class="list__item">HEAD/Прочитать веб-страницу</li>
+                            <li class="list__item">GET/Прочитать веб-страницу</li>
+                            <li class="list__item">POST/Добавить к веб-странице</li>
+                            <li class="list__item">PUT/Сохранить веб-страницу</li>
+                            <li class="list__item">TRACE/Отослать назад запрос</li>
+                            <li class="list__item">DELETE/Удалить веб-страницу</li>
+                            <li class="list__item">OPTIONS/Отобразить параметры</li>
+                            <li class="list__item">CONNECT/Зарезервировано для будущего использования</li>
+                        </ul>
+
+                        <h3 class="body__title">Разберем методы HTTP подробнее</h3>
+                        <p class="body__text">
+                            <span class="bold">Метод GET.</span> Запрашивает страницу (файл, объект), закодированную по стандарту MIME. Это самый употребляемый метод. Структура метода: <span>GET имя_файла HTTP/1.1</span>
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод HEAD.</span> Этот метод запрашивает заголовок сообщения. При этом страница не загружается. Этот метод позволяет узнать время последнего обновления страницы, что нужно для управления КЭШем страниц. Этот метод позволяет проверить работоспособность запрашиваемого URL.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод PUT.</span> Этот метод может поместить страницу на сервер. Тело запроса PUT включает размещаемую страницу, которая закодирована по MIME. Это метод требует идентификации клиента.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод POST.</span> Этот метод добавляет содержимое к уже имеющейся странице. Используется, как пример, для добавления записи на форум.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод DELETE.</span> Этот метод уничтожает страницу. Метод удаления требует подтверждения прав пользователя на удаление.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод TRACE.</span> Этот метод отладки. Он указывает серверу отослать запрос назад и позволяет узнать, искажается или нет, запрос клиента, вернувшись от сервера.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод TRACE.</span> Метод резерва, не используется.
+                        </p>
+                        <p class="body__text">
+                            <span class="bold">Метод OPTIONS</span> Позволяет запросить свойства сервера и свойства любого файла.
+                        </p>
+                        <p class="body__text">В общении клиента и сервера «запрос-ответ», сервер обязательно генерирует ответ. Это может быть веб-страница или строку состояния с кодом состояния. Код состояния вам хорошо известен. Один из кодов известный код 404 – Страница не найдена.</p>
+
+                        <h3 class="body__title">Группы кодов состояния</h3>
+                        <p class="body__text">
+                            1хх: Готовность сервера, Код 100 – сервер готов обрабатывать запросы клиента;
+                        </p>
+                        <p class="body__text">
+                            2хх: Успех.
+                        </p>
+                        <ul class="body__list">
+                            <li class="list__item">Код 200 – запрос обработан успешно;</li>
+                            <li class="list__item">Код 204 – Содержимого нет.</li>
+                        </ul>
+                        <p class="body__text">
+                            3хх: Перенаправление.
+                        </p>
+                        <ul class="body__list">
+                            <li class="list__item">Код 301 – Запрашиваемая страница перенесена;</li>
+                            <li class="list__item">Код 304 – Страница в КЭШе еще актуальна.</li>
+                        </ul>
+                        <p class="body__text">
+                            4хх: Ошибка клиента.
+                        </p>
+                        <ul class="body__list">
+                            <li class="list__item">Код 403 – Ошибка доступа;</li>
+                            <li class="list__item">Код 404 – Страница не найдена.</li>
+                        </ul>
+                        <p class="body__text">
+                            5хх: Ошибки сервера.
+                        </p>
+                        <ul class="body__list">
+                            <li class="list__item">Код 500 – Ошибка сервера внутренняя;</li>
+                            <li class="list__item">Код 503 – Предпринять попытку запроса позже.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer_content">
+                    <div class="footer_author">
+                        Зорин Степан
+                    </div>
+                    <div class="footer_email">
+                        stz.hom@gmail.com
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
